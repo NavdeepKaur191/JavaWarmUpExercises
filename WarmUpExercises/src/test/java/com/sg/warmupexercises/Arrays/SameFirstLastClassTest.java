@@ -38,7 +38,7 @@ public class SameFirstLastClassTest {
 
         //SameFirstLast({1, 2, 1}) -> true
         int[] anotherNumbersArray = {1, 2, 1};
-        assertTrue(sameFirstLast(numbers), "The first and last number is equal in array");
+        assertTrue(sameFirstLast(anotherNumbersArray), "The first and last number is equal in array");
 
     }
 }
