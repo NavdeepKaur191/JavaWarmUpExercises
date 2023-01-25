@@ -1,8 +1,6 @@
 package com.sg.warmupexercises;
 
-import static com.sg.warmupexercises.ArrayExercises.commonEnd;
-import static com.sg.warmupexercises.ArrayExercises.firstLast6;
-import static com.sg.warmupexercises.ArrayExercises.makePi;
+import static com.sg.warmupexercises.ArrayExercises.*;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
@@ -11,85 +9,76 @@ import org.junit.jupiter.api.Test;
  * @author nkaur
  */
 public class ArrayExercisesTest {
-    
+
     public ArrayExercisesTest() {
     }
+
     /**
      * Test of FirstLast6 method.
      */
-    
     @Test
     public void testFirstLast6() {
-        //firstLast6({1, 2, 6}) -> true
-        int[] array1={1, 2, 6};
-        assertTrue(firstLast6(array1),"The result should be true when last digit is 6");
-        
-        //firstLast6({6, 1, 2, 3}) -> true
-        int[] array2={6, 1, 2, 3};
-        assertTrue(firstLast6(array2),"The result should be true when first digit is 6");
-        
-        //firstLast6({13, 6, 1, 2, 3}) -> false
-        int[] array3={13, 6, 1, 2, 3};
-        assertFalse(firstLast6(array3),"The result should be false when none of the  first and last digit is 6");
-    }  
-    
+        assertTrue(firstLast6(new int[]{1, 2, 6}), "firstLast6({1, 2, 6}) -> true fails");
+        assertTrue(firstLast6(new int[]{6, 1, 2, 3}), "firstLast6({6, 1, 2, 3}) -> true fails");
+        assertFalse(firstLast6(new int[]{13, 6, 1, 2, 3}), "firstLast6({13, 6, 1, 2, 3}) -> false fails");
+    }
+
     /**
      * Test of SameFirstLast method
      */
     @Test
     public void testSameFirstLast() {
-        //sameFirstLast({1, 2, 3}) -> false
-        int[] array1 = {1, 2, 3};
-        assertFalse(sameFirstLast(array1), "It should return false when the first and last number is not equal in array");
-        
-        //sameFirstLast({1, 2, 3, 1}) -> true
-        int[] array2 = {1, 2, 3, 1};
-        assertTrue(sameFirstLast(array2), "It should return true when the first and last number is equal in array");
+        assertFalse(sameFirstLast(new int[]{1, 2, 3}), "sameFirstLast({1, 2, 3}) -> false fails");
+        assertTrue(sameFirstLast(new int[]{1, 2, 3, 1}), "sameFirstLast({1, 2, 3, 1}) -> true fails");
+        assertTrue(sameFirstLast(new int[]{1, 2, 1}), "sameFirstLast({1, 2, 1}) -> true fails");
+    }
 
-        //sameFirstLast({1, 2, 1}) -> true
-        int[] array3 = {1, 2, 1};
-        assertTrue(sameFirstLast(array3), "It should return true when the first and last number is equal in array");
-    }
-    
     @Test
-    public void testMakePi()
-    {
-     //makePi(3) -> {3, 1, 4}
-     int[] expectedResult1={3, 1, 4};
-     assertEquals(expectedResult1, makePi(3),"passing 3 should return {3,1,4}");
-     
-     //makePi(1) -> {3}
-     int[] expectedResult2={3};
-     assertEquals(expectedResult2, makePi(1),"passing 1 should return {3}");
-     
-     //makePi(5) -> {3, 1, 4,1,5}
-     int[] expectedResult3={3, 1, 4,1,5};
-     assertEquals(expectedResult3, makePi(5),"passing 5 should return {3, 1, 4,1,5}");
+    public void testMakePi() {
+        assertEquals(new int[]{3, 1, 4}, makePi(3), "makePi(3) -> {3, 1, 4} fails");
+        assertEquals(new int[]{3}, makePi(1), "makePi(1) -> {3} fails");
+        assertEquals(new int[]{3, 1, 4, 1, 5}, makePi(5), "makePi(5) -> {3, 1, 4,1,5} fails");
     }
-    
-     /**
+
+    /**
      * Test of commonEnd method
      */
     @Test
     public void testCommonEnd() {
-      //commonEnd({1, 2, 3}, {7, 3}) -> true
-      int[] array1={1, 2, 3};
-      int[] array2={7, 3};      
-      assertTrue(commonEnd(array1,array2),"Both arrays have common ending");
-      
-      //commonEnd({1, 2, 3}, {1, 3}) -> true
-      int[] array3={1, 2, 3};
-      int[] array4={1, 3};      
-      assertTrue(commonEnd(array3,array4),"Both arrays have common ending");
-      
-      //commonEnd({1, 2, 3}, {7, 3, 2}) -> false  
-      int[] array5={1, 2, 3};
-      int[] array6={7, 3, 2};      
-      assertFalse(commonEnd(array5,array6),"Both arrays does not have common ending");        
+        assertTrue(commonEnd(new int[]{1, 2, 3}, new int[]{7, 3}), "commonEnd({1, 2, 3}, {7, 3}) -> true fails");
+        assertTrue(commonEnd(new int[]{1, 2, 3}, new int[]{1, 3}), "commonEnd({1, 2, 3}, {1, 3}) -> true fails");
+        assertFalse(commonEnd(new int[]{1, 2, 3}, new int[]{7, 3, 2}), "commonEnd({1, 2, 3}, {7, 3, 2}) -> false fails");
     }
 
-    private boolean sameFirstLast(int[] array1) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    /**
+     * Test of sum method
+     */
+    @Test
+    public void testSum() {
+        assertEquals(6, sum(new int[]{1, 2, 3}), "sum({1, 2, 3}) -> 6 fails");
+        assertEquals(18, sum(new int[]{5, 11, 2}), "{5, 11, 2}) -> 18 fails");
+        assertEquals(7, sum(new int[]{7, 0, 0}), "sum({7, 0, 0}) -> 7 fails");
     }
-    
+
+    /**
+     * Test of rotateLeft method
+     */
+    @Test
+    public void testRotateLeft() {
+        assertEquals(new int[]{2, 3, 1}, rotateLeft(new int[]{1, 2, 3}), "rotateLeft({1, 2, 3}) -> {2, 3, 1} fails");
+        assertEquals(new int[]{11, 9, 5}, rotateLeft(new int[]{5, 11, 9}), "rotateLeft({5, 11, 9}) -> {11, 9, 5} fails");
+        assertEquals(new int[]{0, 0, 7}, rotateLeft(new int[]{7, 0, 0}), "rotateLeft({7, 0, 0}) -> {0, 0, 7} fails");
+    }
+
+    /**
+     * Test of reverse method
+     */
+    @Test
+    public void testReverse() {
+        assertEquals(new int[]{3, 2, 1}, reverse(new int[]{1, 2, 3}), "reverse({1, 2, 3}) ->  {3, 2, 1} fails");
+        assertEquals(new int[]{1, 11, 9, 5}, reverse(new int[]{5, 9, 11, 1}), "reverse({5, 9, 11, 1}) ->  {1, 11, 9, 5} fails");
+        assertEquals(new int[]{0, 0, 7}, reverse(new int[]{7, 0, 0}), "reverse({7, 0, 0}) ->  {0, 0, 7} fails");
+        assertEquals(new int[]{7}, reverse(new int[]{7}), "reverse({7}) ->  {7} fails");
+    }
+  
 }

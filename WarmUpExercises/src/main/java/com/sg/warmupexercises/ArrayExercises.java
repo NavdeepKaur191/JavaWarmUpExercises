@@ -13,8 +13,7 @@ public class ArrayExercises {
      * Given an array of int, return true if 6 appears as either the first or
      * last element in the array. The array will be length 1 or more.
      *
-     * Example Results: 
-     * firstLast6({1, 2, 6}) -> true 
+     * Example Results: firstLast6({1, 2, 6}) -> true
      * firstLast6({6, 1, 2, 3}) -> true 
      * firstLast6({13, 6, 1, 2, 3}) -> false
      *
@@ -44,17 +43,17 @@ public class ArrayExercises {
         throw new UnsupportedOperationException("Code not yet written...!");
     }
 
-    
     /**
-     * Please replace the code in following method according to following details.
-     * 
+     * Please replace the code in following method according to following
+     * details.
+     *
      * Return an int array length n containing the first n digits of pi.
-     * 
-     * Expected Results:
-     * makePi(3) -> {3, 1, 4}
-     * makePi(1) -> {3}
-     * makePi(5) -> {3, 1, 4,1,5}  
-     * 
+     *
+     * Expected Results: 
+     * makePi(3) -> {3, 1, 4} 
+     * makePi(1) -> {3} 
+     * makePi(5) -> {3, 1, 4,1,5}
+     *
      * @param n number of digits
      * @return int array n containing the first n digits of pi
      */
@@ -71,8 +70,10 @@ public class ArrayExercises {
      * element or they have the same last element. Both arrays will be length 1
      * or more.
      *
-     * commonEnd({1, 2, 3}, {7, 3}) -> true commonEnd({1, 2, 3}, {7, 3, 2}) ->
-     * false commonEnd({1, 2, 3}, {1, 3}) -> true
+     * Expected Results:
+     * commonEnd({1, 2, 3}, {7, 3}) -> true 
+     * commonEnd({1, 2, 3}, {7, 3, 2}) ->false 
+     * commonEnd({1, 2, 3}, {1, 3}) -> true
      *
      * @param a array of int
      * @param b array of int
@@ -82,4 +83,59 @@ public class ArrayExercises {
         throw new UnsupportedOperationException("Code not yet written...!");
 
     }
+
+    /**
+     * Please replace the code in following method according to following
+     * details.
+     *
+     * Given an array of int, return the sum of all the elements.
+     *
+     * Example Results: 
+     * sum({1, 2, 3}) -> 6 
+     * sum({5, 11, 2}) -> 18 
+     * sum({7, 0, 0}) -> 7
+     *
+     * @param numbers int array
+     * @return sun of all elements of array
+     */
+    public static int sum(int[] numbers) {
+        throw new UnsupportedOperationException("Code not yet written...!");
+    }
+
+    /**
+     * Please replace the code in following method according to following
+     * details. Given an array of int, return an array with the elements
+     * "rotated left" so {1, 2, 3} yields {2, 3, 1}.
+     *
+     * Example Results: 
+     * rotateLeft({1, 2, 3}) -> {2, 3, 1} 
+     * rotateLeft({5, 11,9}) -> {11, 9, 5} 
+     * rotateLeft({7, 0, 0}) -> {0, 0, 7}
+     *
+     * @param numbers int array
+     * @return rotated int array
+     */
+    public static int[] rotateLeft(int[] numbers) {
+        throw new UnsupportedOperationException("Code not yet written...!");
+    }
+
+    /**
+     * Please replace the code in following method according to following details.
+     * 
+     * Given an array of int length 3, return a new array with the elements in reverse order, 
+     * 
+     * Example Results:     
+     * reverse({1, 2, 3}) ->  {3, 2, 1}
+     * reverse({ 5, 9, 11, 1 }) ->  { 1, 11, 9, 5 }
+     * reverse({ 7, 0, 0 }) ->  { 0, 0, 7 }
+     * reverse({7}) ->  {7}
+     * 
+     * @param numbers int array
+     * @return reversed int array
+     */
+    public static int[] reverse(int[] numbers) {
+        throw new UnsupportedOperationException("Code not yet written...!");
+
+    }
+
 }
