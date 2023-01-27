@@ -13,19 +13,13 @@ public class ArrayExercisesTest {
     public ArrayExercisesTest() {
     }
 
-    /**
-     * Test of FirstLast6 method.
-     */
     @Test
     public void testFirstLast6() {
         assertTrue(firstLast6(new int[]{1, 2, 6}), "firstLast6({1, 2, 6}) -> true fails");
         assertTrue(firstLast6(new int[]{6, 1, 2, 3}), "firstLast6({6, 1, 2, 3}) -> true fails");
         assertFalse(firstLast6(new int[]{13, 6, 1, 2, 3}), "firstLast6({13, 6, 1, 2, 3}) -> false fails");
     }
-
-    /**
-     * Test of SameFirstLast method
-     */
+    
     @Test
     public void testSameFirstLast() {
         assertFalse(sameFirstLast(new int[]{1, 2, 3}), "sameFirstLast({1, 2, 3}) -> false fails");
@@ -40,39 +34,27 @@ public class ArrayExercisesTest {
         assertEquals(new int[]{3, 1, 4, 1, 5}, makePi(5), "makePi(5) -> {3, 1, 4,1,5} fails");
     }
 
-    /**
-     * Test of commonEnd method
-     */
     @Test
     public void testCommonEnd() {
         assertTrue(commonEnd(new int[]{1, 2, 3}, new int[]{7, 3}), "commonEnd({1, 2, 3}, {7, 3}) -> true fails");
         assertTrue(commonEnd(new int[]{1, 2, 3}, new int[]{1, 3}), "commonEnd({1, 2, 3}, {1, 3}) -> true fails");
         assertFalse(commonEnd(new int[]{1, 2, 3}, new int[]{7, 3, 2}), "commonEnd({1, 2, 3}, {7, 3, 2}) -> false fails");
     }
-
-    /**
-     * Test of sum method
-     */
+    
     @Test
     public void testSum() {
         assertEquals(6, sum(new int[]{1, 2, 3}), "sum({1, 2, 3}) -> 6 fails");
         assertEquals(18, sum(new int[]{5, 11, 2}), "{5, 11, 2}) -> 18 fails");
         assertEquals(7, sum(new int[]{7, 0, 0}), "sum({7, 0, 0}) -> 7 fails");
     }
-
-    /**
-     * Test of rotateLeft method
-     */
+    
     @Test
     public void testRotateLeft() {
         assertEquals(new int[]{2, 3, 1}, rotateLeft(new int[]{1, 2, 3}), "rotateLeft({1, 2, 3}) -> {2, 3, 1} fails");
         assertEquals(new int[]{11, 9, 5}, rotateLeft(new int[]{5, 11, 9}), "rotateLeft({5, 11, 9}) -> {11, 9, 5} fails");
         assertEquals(new int[]{0, 0, 7}, rotateLeft(new int[]{7, 0, 0}), "rotateLeft({7, 0, 0}) -> {0, 0, 7} fails");
     }
-
-    /**
-     * Test of reverse method
-     */
+    
     @Test
     public void testReverse() {
         assertEquals(new int[]{3, 2, 1}, reverse(new int[]{1, 2, 3}), "reverse({1, 2, 3}) ->  {3, 2, 1} fails");
@@ -81,9 +63,6 @@ public class ArrayExercisesTest {
         assertEquals(new int[]{7}, reverse(new int[]{7}), "reverse({7}) ->  {7} fails");
     }
 
-    /**
-     * Test for higherWins method
-     */
     @Test
     public void testHigherWins() {
         assertEquals(new int[]{3, 3, 3}, higherWins(new int[]{1, 2, 3}), "higherWins({1, 2, 3}) -> {3, 3, 3} fails");
@@ -91,9 +70,6 @@ public class ArrayExercisesTest {
         assertEquals(new int[]{11, 11, 11}, higherWins(new int[]{2, 11, 3}), "higherWins({2, 11, 3}) -> {11, 11, 11} fails");
     }
 
-    /**
-     * Test for getMiddle method
-     */
     @Test
     public void testGetMiddle() {
         assertEquals(new int[]{2, 5}, getMiddle(new int[]{1, 2, 3}, new int[]{4, 5, 6}), "getMiddle({1, 2, 3}, {4, 5, 6}) -> {2, 5} fails");
@@ -101,9 +77,6 @@ public class ArrayExercisesTest {
         assertEquals(new int[]{2, 4}, getMiddle(new int[]{5, 2, 9}, new int[]{1, 4, 5}), "getMiddle({5, 2, 9}, {1, 4, 5}) -> {2, 4} fails");
     }
 
-    /**
-     * Test for hasEven method
-     */
     @Test
     public void testHasEven() {
         assertEquals(true, hasEven(new int[]{2, 5}), "hasEven({2, 5}) -> true fails");
@@ -111,9 +84,6 @@ public class ArrayExercisesTest {
         assertEquals(false, hasEven(new int[]{7, 5}), "hasEven({7, 5}) -> false fails");
     }
 
-    /**
-     * Test for keepLast method
-     */
     @Test
     public void testKeepLast() {
         assertEquals(new int[]{0, 0, 0, 0, 0, 6}, keepLast(new int[]{4, 5, 6}), "keepLast({4, 5, 6}) -> {0, 0, 0, 0, 0, 6}fails");
@@ -121,9 +91,6 @@ public class ArrayExercisesTest {
         assertEquals(new int[]{0, 3}, keepLast(new int[]{3}), "keepLast({3}) -> {0, 3} fails");
     }
 
-    /**
-     * Test for double23 method
-     */
     @Test
     public void testDouble23() {
         assertEquals(true, double23(new int[]{2, 2, 3}), "double23({2, 2, 3}) -> true fails");
@@ -131,9 +98,6 @@ public class ArrayExercisesTest {
         assertEquals(false, double23(new int[]{2, 3, 2, 2}), "double23({2, 3, 2, 2}) -> false fails");
     }
 
-    /**
-     * Test for fix23 method
-     */
     @Test
     public void testFix23() {
         assertEquals(new int[]{1, 2, 0}, fix23(new int[]{1, 2, 3}), "fix23({1, 2, 3}) ->{1, 2, 0} fails");
@@ -141,9 +105,6 @@ public class ArrayExercisesTest {
         assertEquals(new int[]{1, 2, 1}, fix23(new int[]{1, 2, 1}), "fix23({1, 2, 1}) -> {1, 2, 1} fails");
     }
 
-    /**
-     * Test for unlucky1 method
-     */
     @Test
     public void testUnlucky1() {
         assertEquals(true, unlucky1(new int[]{1, 3, 4, 5}), "unlucky1({1, 3, 4, 5}) -> true fails");
@@ -151,9 +112,6 @@ public class ArrayExercisesTest {
         assertEquals(false, unlucky1(new int[]{1, 1, 1}), "unlucky1({1, 1, 1}) -> false fails");
     }
     
-    /**
-     * Test for make2 method
-     */
     @Test
     public void testMake2() {
         assertEquals(new int[] {4, 5}, make2(new int[]{4, 5},new int[]{1, 2, 3}), "make2({4, 5}, {1, 2, 3}) -> {4, 5} fails");
