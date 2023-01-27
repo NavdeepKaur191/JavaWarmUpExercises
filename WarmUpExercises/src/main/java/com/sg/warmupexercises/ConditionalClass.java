@@ -324,4 +324,187 @@ public class ConditionalClass {
         throw new UnsupportedOperationException("Code not yet written...!");
     }
 
+    /**
+     *
+     * Please replace the code in following method according to following details.
+     * 18.We'll say that a number is "teen" if it is in the range 13..19 inclusive.
+     * Given 3 int values, return true if 1 or more of them are teen.
+     *
+     * Example Results:
+     * hasTeen(13, 20, 10) -> true
+     * hasTeen(20, 19, 10) -> true
+     * hasTeen(20, 10, 12) -> false
+     *
+     * @param a
+     * @param b
+     * @param c
+     * @return
+     */
+    public static boolean hasTeen(int a, int b, int c) {
+        throw new UnsupportedOperationException("Code not yet written...!");
+    }
+
+    /**
+     *
+     * Please replace the code in following method according to following details.
+     * 19.We'll say that a number is "teen" if it is in the range 13..19 inclusive.
+     * Given 2 int values, return true if one or the other is teen, but not both.
+     *
+     * Example Results:
+     * soAlone(13, 99) -> true
+     * soAlone(21, 19) -> true
+     * soAlone(13, 13) -> false
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    public static boolean soAlone(int a, int b) {
+        throw new UnsupportedOperationException("Code not yet written...!");
+    }
+
+    /**
+     * Please replace the code in following method according to following details.
+     *
+     * 20.Given a string, if the string "del" appears starting at index 1,
+     * return a string where that "del" has been deleted. Otherwise, return the string unchanged.
+     *
+     * Example Results:
+     * removeDel("adelbc") -> "abc"
+     * removeDel("adelHello") -> "aHello"
+     * removeDel("adedbc") -> "adedbc"
+     *
+     * @param str
+     * @return
+     */
+    public static String removeDel(String str) {
+        throw new UnsupportedOperationException("Code not yet written...!");
+    }
+
+    /**
+     *
+     * Please replace the code in following method according to following details.
+     * 21.Return true if the given string begins with "*ix", the '*' can be anything, so "pix", "9ix" .. all count.
+     *
+     * Example Results:
+     * ixStart("mix snacks") -> true
+     * ixStart("pix snacks") -> true
+     * ixStart("piz snacks") -> false
+     *
+     * @param str
+     * @return
+     */
+    public static boolean ixStart(String str) {
+        throw new UnsupportedOperationException("Code not yet written...!");
+    }
+
+    /**
+     * Please replace the code in following method according to following details.
+     * 22.Given a string, return a string made of the first 2 chars (if present),
+     * however include first char only if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz".
+     *
+     * Example Results:
+     * startOz("ozymandias") -> "oz"
+     * startOz("bzoo") -> "z"
+     * startOz("oxx") -> "o"
+     *
+     * @param str
+     * @return
+     */
+    public static String startOz(String str) {
+        throw new UnsupportedOperationException("Code not yet written...!");
+    }
+
+    /**
+     *
+     * Please replace the code in following method according to following details.
+     *
+     * 23.Given three int values, a b c, return the largest.
+     *
+     * Example Results:
+     * max(1, 2, 3) -> 3
+     * max(1, 3, 2) -> 3
+     * max(3, 2, 1) -> 3
+     *
+     * @param a
+     * @param b
+     * @param c
+     * @return
+     */
+    public static int max(int a, int b, int c) {
+        throw new UnsupportedOperationException("Code not yet written...!");
+    }
+
+    /**
+     * Please replace the code in following method according to following details.
+     *
+     * 24.Given 2 int values, return whichever value is nearest to the value 10, or return 0 in the event of a tie.
+     *
+     * Example Results:
+     * closer(8, 13) -> 8
+     * closer(13, 8) -> 8
+     * closer(13, 7) -> 0
+     *
+     * @param a
+     * @param b
+     * @return
+     */
+    public static int closer(int a, int b) {
+        throw new UnsupportedOperationException("Code not yet written...!");
+    }
+
+    /**
+     * Please replace the code in following method according to following details.
+     *
+     * 25.Return true if the given string contains between 1 and 3 'e' chars.
+     *
+     * Example Results:
+     * gotE("Hello") -> true
+     * gotE("Heelle") -> true
+     * gotE("Heelele") -> false
+     *
+     * @param str
+     * @return
+     */
+    public static boolean gotE(String str) {
+        throw new UnsupportedOperationException("Code not yet written...!");
+    }
+
+    /**
+     * Please replace the code in following method according to following details.
+     *
+     * 26.Given a string, return a new string where the last 3 chars are now in upper case.
+     * If the string has less than 3 chars, uppercase whatever is there.
+     *
+     * Example Results:
+     * endUp("Hello") -> "HeLLO"
+     * endUp("hi there") -> "hi thERE"
+     * endUp("hi") -> "HI"
+     *
+     * @param str
+     * @return
+     */
+    public static String endUp(String str) {
+        throw new UnsupportedOperationException("Code not yet written...!");
+    }
+
+    /**
+     * Please replace the code in following method according to following details.
+     * 27.Given a non-empty string and an int N, return the string made starting with char 0,
+     * and then every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more.
+     *
+     * Example Results:
+     * everyNth("Miracle", 2) -> "Mrce"
+     * everyNth("abcdefg", 2) -> "aceg"
+     * everyNth("abcdefg", 3) -> "adg"
+     *
+     * @param str
+     * @param n
+     * @return
+     */
+    public static String everyNth(String str, int n) {
+        throw new UnsupportedOperationException("Code not yet written...!");
+    }
+
+    
 }

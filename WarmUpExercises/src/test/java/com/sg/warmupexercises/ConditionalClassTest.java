@@ -76,37 +76,37 @@ public class ConditionalClassTest {
 
     @Test
     public void testNotString() {
-        assertEquals("not candy", notString("candy"), "[notString(candy) -> not candy] fails");
-        assertEquals("not x", notString("x"), "[notString(x) -> not x] fails");
-        assertEquals("not bad", notString("not bad"), "[notString(not bad) -> not bad] fails");
+        assertEquals("not candy", notString("candy"), "notString(\"candy\") -> \"not candy\" fails");
+        assertEquals("not x", notString("x"), "notString(\"x\") -> \"not x\" fails");
+        assertEquals("not bad", notString("not bad"), "notString(\"not bad\") -> \"not bad\" fails");
     }
 
     @Test
     public void testMissingChar() {
-        assertEquals("ktten", missingChar("kitten", 1), "[missingChar(kitten, 1) -> ktten] fails");
-        assertEquals("itten", missingChar("kitten", 0), "[missingChar(kitten, 0) -> itten] fails");
-        assertEquals("kittn", missingChar("kitten", 4), "[missingChar(kitten, 4) -> kittn] fails");
+        assertEquals("ktten", missingChar("kitten", 1), "missingChar(\"kitten\", 1) -> \"ktten\" fails");
+        assertEquals("itten", missingChar("kitten", 0), "missingChar(\"kitten\", 0) -> \"itten\" fails");
+        assertEquals("kittn", missingChar("kitten", 4), "missingChar(\"kitten\", 4) -> \"kittn\" fails");
     }
 
     @Test
     public void testFrontBack() {
-        assertEquals("eodc", frontBack("code"), "[frontBack(code) -> eodc] fails");
-        assertEquals("a", frontBack("a"), "[frontBack(a) -> a] fails");
-        assertEquals("ba", frontBack("ab"), "[frontBack(ab) -> ba] fails");
+        assertEquals("eodc", frontBack("code"), "frontBack(\"code\") -> \"eodc\" fails");
+        assertEquals("a", frontBack("a"), "frontBack(\"a\") -> \"a\" fails");
+        assertEquals("ba", frontBack("ab"), "frontBack(\"ab\") -> \"ba\" fails");
     }
 
     @Test
     public void testFront3() {
-        assertEquals("MicMicMic", front3("Microsoft"), "[front3(Microsoft) -> MicMicMic] fails");
-        assertEquals("ChoChoCho", front3("Chocolate"), "[front3(Chocolate) -> ChoChoCho] fails");
-        assertEquals("atatat", front3("at"), "[front3(at) -> atatat] fails");
+        assertEquals("MicMicMic", front3("Microsoft"), "front3(\"Microsoft\") -> \"MicMicMic\" fails");
+        assertEquals("ChoChoCho", front3("Chocolate"), "front3(\"Chocolate\") -> \"ChoChoCho\" fails");
+        assertEquals("atatat", front3("at"), "front3(\"at\") -> \"atatat\" fails");
     }
 
     @Test
     public void testBackAround() {
-        assertEquals("tcatt", backAround("cat"), "[backAround(cat) -> tcatt] fails");
-        assertEquals("oHelloo", backAround("Hello"), "[backAround(Hello) -> oHelloo] fails");
-        assertEquals("aaa", backAround("a"), "[backAround(a) -> aaa] fails");
+        assertEquals("tcatt", backAround("cat"), "backAround(\"cat\") -> \"tcatt\" fails");
+        assertEquals("oHelloo", backAround("Hello"), "backAround(\"Hello\") -> \"oHelloo\" fails");
+        assertEquals("aaa", backAround("a"), "backAround(\"a\") -> \"aaa fails");
     }
 
     @Test
@@ -118,27 +118,91 @@ public class ConditionalClassTest {
 
     @Test
     public void testStartHi() {
-        assertEquals(true, startHi("hi there"), "[startHi(hi there) -> true] fails");
-        assertEquals(true, startHi("hi"), "[startHi(hi) -> true] fails");
-        assertEquals(false, startHi("high up"), "[startHi(high up) -> false] fails");
+        assertEquals(true, startHi("hi there"), "startHi(\"hi there\") -> true fails");
+        assertEquals(true, startHi("hi"), "startHi(\"hi\") -> true fails");
+        assertEquals(false, startHi("high up"), "startHi(\"high up\") -> false fails");
     }
-         
+
     @Test
     public void testIcyHot() {
         assertEquals(true, icyHot(120, -1), " icyHot(120, -1) -> true fails");
         assertEquals(true, icyHot(-1, 120), "icyHot(-1, 120) -> true fails");
         assertEquals(false, icyHot(2, 120), "icyHot(2, 120) -> false fails");
     }
-    
-//    Needs Correction
-//    * between10and20(12, 99) -> true
-//     * between10and20(21, 12) -> true
-//     * between10and20(8, 99) -> false
-//    @Test
-//    public void testBetween10and20() {
-//        assertEquals(true, between10and20(12, 991), " between10and20(12, 99) -> true fails");
-//        assertEquals(true, between10and20(20, 12), "between10and20(21, 12) -> true fails");
-//        assertEquals(false, between10and20(2, 120), "between10and20(2, 120) -> false fails");
-//    }
-    
+
+    @Test
+    public void testBetween10and20() {
+        assertEquals(true, between10and20(12, 99), " between10and20(12, 99) -> true fails");
+        assertEquals(true, between10and20(21, 12), "between10and20(21, 12) -> true fails");
+        assertEquals(false, between10and20(8,99), "between10and20(8, 99) -> false fails");
+    }  
+    @Test
+    public void testHasTeen() {
+        assertEquals(true, hasTeen(13, 20, 10), " hasTeen(13, 20, 10) -> true fails");
+        assertEquals(true, hasTeen(20, 19, 10), "hasTeen(20, 19, 10) -> true fails");
+        assertEquals(false, hasTeen(20, 10, 12), "hasTeen(20, 10, 12) -> false fails");
+    }
+
+    @Test
+    public void testSoAlone() {
+        assertEquals(true, soAlone(13, 99), " soAlone(13, 99) -> true fails");
+        assertEquals(true, soAlone(21, 19), "soAlone(21, 19) -> true fails");
+        assertEquals(false, soAlone(13, 13), "soAlone(13,13) -> false fails");
+    }
+
+    @Test
+    public void testRemoveDel() {
+        assertEquals("abc", removeDel("adelbc"), "removeDel(\"adelbc\") -> \"abc\" fails");
+        assertEquals("aHello", removeDel("adelHello"), "removeDel(\"adelHello\") -> \"aHello\" fails");
+        assertEquals("adedbc", removeDel("adedbc"), "removeDel(\"adedbc\") -> \"adedbc\" fails");
+    }
+
+    @Test
+    public void testIxStart() {
+        assertEquals(true, ixStart("mix snacks"), "ixStart(\"mix snacks\") -> true fails");
+        assertEquals(true, ixStart("pix snacks"), "ixStart(\"pix snacks\") -> true fails");
+        assertEquals(false, ixStart("piz snacks"), "removeDel(ixStart(\"piz snacks\") -> false fails");
+    }
+
+    @Test
+    public void testStartOz() {
+        assertEquals(true, startOz("ozymandias"), "startOz(\"ozymandias\") -> \"oz\" fails");
+        assertEquals(true, startOz("bzoo"), "ixStart(startOz(\"bzoo\") -> \"z\" fails");
+        assertEquals(false, startOz("oxx"), "removeDel(startOz(\"oxx\") -> \"o\" fails");
+    }
+
+    @Test
+    public void testMax() {
+        assertEquals(3, max(1, 2, 3), "max(1, 2, 3) -> 3 fails");
+        assertEquals(3, max(1, 3, 2), "max(1, 3, 2) -> 3 fails");
+        assertEquals(3, max(3, 2, 1), "max(3, 2, 1) -> 3 fails");
+    }
+
+    @Test
+    public void testCloser() {
+        assertEquals(8, closer(8, 13), "closer(8, 13) -> 8 fails");
+        assertEquals(8, closer(13, 8), "closer(13, 8) -> 8 fails");
+        assertEquals(0, closer(13, 7), "closer(13, 7) -> 0 fails");
+    }
+
+    @Test
+    public void testGotE() {
+        assertEquals(true, gotE("Hello"), "gotE(\"Hello\") -> true fails");
+        assertEquals(true, gotE("Heelle"), "gotE(\"Heelle\") -> true fails");
+        assertEquals(false, gotE("Heelele"), "gotE(\"Heelele\") -> false fails");
+    }
+
+    @Test
+    public void testEndUp() {
+        assertEquals("HeLLO", endUp("Hello"), " endUp(\"Hello\") -> \"HeLLO\" fails");
+        assertEquals("hi thERE", endUp("hi there"), "endUp(\"hi there\") -> \"hi thERE\" fails");
+        assertEquals("HI", endUp("hi"), "endUp(\"hi\") -> \"HI\" fails");
+    }
+
+    @Test
+    public void testEveryNth() {
+        assertEquals("Mrce", everyNth("Miracle", 2), "everyNth(\"Miracle\", 2) -> \"Mrce\" fails");
+        assertEquals("aceg", everyNth("abcdefg", 2), "everyNth(\"abcdefg\", 2) -> \"aceg\" fails");
+        assertEquals("adg", everyNth("abcdefg", 3), "everyNth(\"abcdefg\", 3) -> \"adg\" fails");
+    }
 }
