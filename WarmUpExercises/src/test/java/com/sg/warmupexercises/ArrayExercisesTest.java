@@ -44,7 +44,7 @@ public class ArrayExercisesTest {
     @Test
     public void testSum() {
         assertEquals(6, sum(new int[]{1, 2, 3}), "sum({1, 2, 3}) -> 6 fails");
-        assertEquals(18, sum(new int[]{5, 11, 2}), "{5, 11, 2}) -> 18 fails");
+        assertEquals(18, sum(new int[]{5, 11, 2}), "sum({5, 11, 2}) -> 18 fails");
         assertEquals(7, sum(new int[]{7, 0, 0}), "sum({7, 0, 0}) -> 7 fails");
     }
 

@@ -4,7 +4,7 @@ package com.sg.warmupexercises;
  *
  * @author nkaur
  */
-public class ConditionalClass {
+public class ConditionalExercises {
 
     /**
      * Please replace the code in following method according to following details.
@@ -125,7 +125,7 @@ public class ConditionalClass {
      * Please replace the code in following method according to following details.
      *
      * 7.Given an int n, return true if it is within 10 of 100 or 200.
-     * Hint: Check out the C# Math class for absolute value
+     * Hint: Check out the Math class for absolute value
      *
      * Example Results:
      * nearHundred(103) -> true

@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.sg.warmupexercises;
 
-import static com.sg.warmupexercises.ConditionalClass.*;
+import static com.sg.warmupexercises.ConditionalExercises.*;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,9 +8,9 @@ import static org.junit.jupiter.api.Assertions.*;
  *
  * @author nkaur
  */
-public class ConditionalClassTest {
+public class ConditionalExercisesTest {
 
-    public ConditionalClassTest() {
+    public ConditionalExercisesTest() {
     }
 
     @Test
