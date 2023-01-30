@@ -8,6 +8,7 @@ public class LogicExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 1.When squirrels get together for a party, they like to have cigars.
      * A squirrel party is successful when the number of cigars is between 40 and 60, inclusive.
      * Unless it is the weekend, in which case there is no upper bound on the number of cigars.
@@ -53,6 +54,7 @@ public class LogicExercises {
     /**
      *
      * Please replace the code in following method according to following details.
+     * 
      * 3.The children in Cleveland spend most of the day playing outside. In particular,
      * they play if the temperature is between 60 and 90 (inclusive). Unless it is summer,
      * then the upper limit is 100 instead of 90. Given an int temperature and a boolean isSummer,
@@ -96,7 +98,8 @@ public class LogicExercises {
     /**
      *
      * Please replace the code in following method according to following details.
-     * 5.Given 2 ints, a and b, return their sum. However, sums in the range 10..19 inclusive are forbidden,
+     * 
+     * 5.Given 2 int values, a and b, return their sum. However, sums in the range 10..19 inclusive are forbidden,
      * so in that case just return 20.
      *
      * Example Results:
@@ -115,6 +118,7 @@ public class LogicExercises {
     /**
      *
      * Please replace the code in following method according to following details.
+     * 
      * 6.Given a day of the week encoded as 0=Sun, 1=Mon, 2=Tue, ...6=Sat,
      * and a boolean indicating if we are on vacation, return a string of the form "7:00" indicating
      * when the alarm clock should ring. Weekdays, the alarm should be "7:00" and on the weekend it should be "10:00".
@@ -154,6 +158,7 @@ public class LogicExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 8.Given a number n, return true if n is in the range 1..10, inclusive.
      * Unless "outsideMode" is true, in which case return true if the number is less or equal to 1,
      * or greater or equal to 10.
@@ -174,6 +179,7 @@ public class LogicExercises {
     /**
      *
      * Please replace the code in following method according to following details.
+     * 
      * 9.We'll say a number is special if it is a multiple of 11 or if it is one more than a multiple of 11.
      * Return true if the given non-negative number is special. Use the % "mod" operator
      *
@@ -210,6 +216,7 @@ public class LogicExercises {
     /**
      *
      * Please replace the code in following method according to following details.
+     * 
      * 11.Return true if the given non-negative number is a multiple of 3 or 5, but not both.
      * Use the % "mod" operator
      *
@@ -227,6 +234,7 @@ public class LogicExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 12.Your cell phone rings. Return true if you should answer it.
      * Normally you answer, except in the morning you only answer if it is your mom calling.
      * In all cases, if you are asleep, you do not answer.
@@ -266,6 +274,7 @@ public class LogicExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 14.Given three int values, a b c, return true if b is greater than a, and c is greater than b.
      * However, with the exception that if "bOk" is true, b does not need to be greater than a.
      *
@@ -287,7 +296,7 @@ public class LogicExercises {
     /**
      * Please replace the code in following method according to following details.
      *
-     * 15.Given three ints, a b c, return true if they are in strict increasing order,
+     * 15.Given three int values, a b c, return true if they are in strict increasing order,
      * such as 2 5 11, or 5 6 7, but not 6 5 7 or 5 5 7. However, with the exception that if "equalOk" is true,
      * equality is allowed, such as 5 5 7 or 5 5 5.
      *
@@ -308,6 +317,7 @@ public class LogicExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 16.Given three int values, a b c, return true if two or more of them have the same rightmost digit.
      * The int values are non-negative.
      *
@@ -327,6 +337,7 @@ public class LogicExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 17.Return the sum of two 6-sided dice rolls, each in the range 1..6.
      * However, if noDoubles is true, if the two dice show the same value, increment one die to the next value,
      * wrapping around to 1 if its value was 6.

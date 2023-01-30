@@ -18,6 +18,7 @@ public class ConditionalExercisesTest {
         assertEquals(true, areWeInTrouble(true, true), "areWeInTrouble(true, true) -> true fails");
         assertEquals(true, areWeInTrouble(false, false), "areWeInTrouble(false, false) -> true fails");
         assertEquals(false, areWeInTrouble(true, false), " areWeInTrouble(true, false) -> false fails");
+        assertEquals(false, areWeInTrouble(false, true), " areWeInTrouble(false,true) -> false fails");
     }
 
     @Test
@@ -101,7 +102,7 @@ public class ConditionalExercisesTest {
     public void testBackAround() {
         assertEquals("tcatt", backAround("cat"), "backAround(\"cat\") -> \"tcatt\" fails");
         assertEquals("oHelloo", backAround("Hello"), "backAround(\"Hello\") -> \"oHelloo\" fails");
-        assertEquals("aaa", backAround("a"), "backAround(\"a\") -> \"aaa fails");
+        assertEquals("aaa", backAround("a"), "backAround(\"a\") -> \"aaa\" fails");
     }
 
     @Test
@@ -116,6 +117,9 @@ public class ConditionalExercisesTest {
         assertEquals(true, startHi("hi there"), "startHi(\"hi there\") -> true fails");
         assertEquals(true, startHi("hi"), "startHi(\"hi\") -> true fails");
         assertEquals(false, startHi("high up"), "startHi(\"high up\") -> false fails");
+        assertEquals(false, startHi("g"), "startHi(\"g\") -> false fails");
+        assertEquals(false, startHi("hip"), "startHi(\"hip\") -> false fails");
+        assertEquals(true, startHi("hi, how are you?"), "startHi(\"hi, how are you?\") -> true fails");
     }
 
     @Test
@@ -129,8 +133,9 @@ public class ConditionalExercisesTest {
     public void testBetween10and20() {
         assertEquals(true, between10and20(12, 99), " between10and20(12, 99) -> true fails");
         assertEquals(true, between10and20(21, 12), "between10and20(21, 12) -> true fails");
-        assertEquals(false, between10and20(8,99), "between10and20(8, 99) -> false fails");
-    }  
+        assertEquals(false, between10and20(8, 99), "between10and20(8, 99) -> false fails");
+    }
+
     @Test
     public void testHasTeen() {
         assertEquals(true, hasTeen(13, 20, 10), " hasTeen(13, 20, 10) -> true fails");
@@ -142,7 +147,8 @@ public class ConditionalExercisesTest {
     public void testSoAlone() {
         assertEquals(true, soAlone(13, 99), " soAlone(13, 99) -> true fails");
         assertEquals(true, soAlone(21, 19), "soAlone(21, 19) -> true fails");
-        assertEquals(false, soAlone(13, 13), "soAlone(13,13) -> false fails");
+        assertEquals(false, soAlone(13, 13), "soAlone(13,13) -> false fails");        
+        assertEquals(false, soAlone(44, 5), "soAlone(44,5) -> false fails");               
     }
 
     @Test
@@ -161,9 +167,10 @@ public class ConditionalExercisesTest {
 
     @Test
     public void testStartOz() {
-        assertEquals(true, startOz("ozymandias"), "startOz(\"ozymandias\") -> \"oz\" fails");
-        assertEquals(true, startOz("bzoo"), "ixStart(startOz(\"bzoo\") -> \"z\" fails");
-        assertEquals(false, startOz("oxx"), "removeDel(startOz(\"oxx\") -> \"o\" fails");
+        assertEquals("oz", startOz("ozymandias"), "startOz(\"ozymandias\") -> \"oz\" fails");
+        assertEquals("z", startOz("bzoo"), "ixStart(startOz(\"bzoo\") -> \"z\" fails");
+        assertEquals("o", startOz("oxx"), "removeDel(startOz(\"oxx\") -> \"o\" fails");
+        assertEquals("", startOz("w"), "removeDel(startOz(\"w\") -> \"\" fails");        
     }
 
     @Test
@@ -184,7 +191,8 @@ public class ConditionalExercisesTest {
     public void testGotE() {
         assertEquals(true, gotE("Hello"), "gotE(\"Hello\") -> true fails");
         assertEquals(true, gotE("Heelle"), "gotE(\"Heelle\") -> true fails");
-        assertEquals(false, gotE("Heelele"), "gotE(\"Heelele\") -> false fails");
+        assertEquals(false, gotE("Heelele"), "gotE(\"Heelele\") -> false fails");         
+        assertEquals(false, gotE("344"), "gotE(\"344\") -> false fails");       
     }
 
     @Test

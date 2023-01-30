@@ -13,7 +13,8 @@ public class ArrayExercises {
      * 1.Given an array of int, return true if 6 appears as either the first or
      * last element in the array. The array will be length 1 or more.
      *
-     * Example Results: firstLast6({1, 2, 6}) -> true
+     * Example Results: 
+     * firstLast6({1, 2, 6}) -> true
      * firstLast6({6, 1, 2, 3}) -> true
      * firstLast6({13, 6, 1, 2, 3}) -> false
      *
@@ -124,7 +125,7 @@ public class ArrayExercises {
     /**
      * Please replace the code in following method according to following details.
      *
-     * 7.Given an array of int values, return a new array with the elements in reverse order,
+     * 7.Given an array of int values, return a new array with the elements in reverse order.
      *
      * Example Results:
      * reverse({1, 2, 3}) -> {3, 2, 1}
@@ -235,6 +236,7 @@ public class ArrayExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 13.Given an int array length 3, if there is a 2 in the array immediately followed by a 3,
      * set the 3 element to 0. Return the changed array.
      *

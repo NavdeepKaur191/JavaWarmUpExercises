@@ -23,7 +23,7 @@ public class StringExercisesTest {
     @Test
     public void testAbba() {
         assertEquals("HiByeByeHi", abba("Hi", "Bye"), "abba(\"Hi\", \"Bye\") -> \"HiByeByeHi\" fails");
-        assertEquals("WhatUpUpWhat", abba("What", "Up"), "abba(\"Yo\", \"Alice\") -> \"YoAliceAliceYo\" fails");
+        assertEquals("YoAliceAliceYo", abba("Yo", "Alice"), "abba(\"Yo\", \"Alice\") -> \"YoAliceAliceYo\" fails");
         assertEquals("WhatUpUpWhat", abba("What", "Up"), "abba(\"What\", \"Up\") -> \"WhatUpUpWhat\" fails");
     }
 
@@ -123,6 +123,8 @@ public class StringExercisesTest {
         assertEquals(true, hasBad("badxx"), "hasBad(\"badxx\") -> true fails");
         assertEquals(true, hasBad("xbadxx"), "hasBad(\"xbadxx\") -> true fails");
         assertEquals(false, hasBad("xxbadxx"), "hasBad(\"xxbadxx\") -> false fails");
+        assertEquals(false, hasBad(""), "hasBad(\"\") -> false fails");
+        assertEquals(false, hasBad("cantaloupe"), "hasBad(\"cantaloupe\") -> false fails");
     }
 
     @Test
@@ -130,14 +132,15 @@ public class StringExercisesTest {
         assertEquals("he", atFirst("hello"), " atFirst(\"hello\") -> \"he\" fails");
         assertEquals("hi", atFirst("hi"), "atFirst(\"hi\") -> \"hi\" fails");
         assertEquals("h@", atFirst("h"), "atFirst(\"h\") -> \"h@\" fails");
+        assertEquals("@@", atFirst(""), "atFirst(\"\") -> \"@@\" fails");
     }
 
     @Test
     public void testLastChars() {
         assertEquals("ls", lastChars("last", "chars"), "lastChars(\"last\", \"chars\") -> \"ls\" fails");
         assertEquals("ya", lastChars("yo", "mama"), "lastChars(\"yo\", \"mama\") -> \"ya\" fails");
-        assertEquals("h@", lastChars("hi", ""), "lastChars(\"\", \"\") -> \"@@\" fails");
-        assertEquals("@@", lastChars("", ""), "lastChars(\"hi\", \"\") -> \"h@\" fails");
+        assertEquals("h@", lastChars("hi", ""), "lastChars(\"hi\", \"\") -> \"h@\" fails");
+        assertEquals("@@", lastChars("", ""), "lastChars(\"\", \"\") -> \"@@\" fails");
         assertEquals("@f", lastChars("", "f"), "lastChars(\"\", \"f\") -> \"@f\" fails");
     }
 
@@ -146,6 +149,9 @@ public class StringExercisesTest {
         assertEquals("abcat", conCat("abc", "cat"), "conCat(\"abc\", \"cat\") -> \"abcat\" fails");
         assertEquals("dogcat", conCat("dog", "cat"), "conCat(\"dog\", \"cat\") -> \"dogcat\" fails");
         assertEquals("abc", conCat("abc", ""), "conCat(\"abc\", \"\") -> \"abc\" fails");
+        assertEquals("abc", conCat("", "abc"), "conCat(\"\", \"abc\") -> \"abc\" fails");
+        assertEquals("boat", conCat("b", "boat"), " conCat(\"b\", \"boat\") -> \"boat\" fails");
+        assertEquals("boat", conCat("boat", "t"), "conCat(\"boat\", \"t\") -> \"boat\" fails");
     }
 
     @Test
@@ -153,6 +159,7 @@ public class StringExercisesTest {
         assertEquals("codign", swapLast("coding"), "swapLast(\"coding\") -> \"codign\" fails");
         assertEquals("cta", swapLast("cat"), "swapLast(\"cat\") -> \"cta\" fails");
         assertEquals("ba", swapLast("ab"), "swapLast(\"ab\") -> \"ba\" fails");
+        assertEquals("a", swapLast("a"), "swapLast(\"a\") -> \"a\" fails");
     }
 
     @Test
@@ -167,6 +174,8 @@ public class StringExercisesTest {
         assertEquals("loHi", minCat("Hello", "Hi"), "minCat(\"Hello\", \"Hi\") -> \"loHi\" fails");
         assertEquals("ellojava", minCat("Hello", "java"), "minCat(\"Hello\", \"java\") -> \"ellojava\" fails");
         assertEquals("javaello", minCat("java", "Hello"), "minCat(\"java\", \"Hello\") -> \"javaello\" fails");
+        assertEquals("", minCat("", "beep"), "minCat(\"\", \"beep\") -> \"\" fails");
+        assertEquals("xy", minCat("x", "yyyyy"), "minCat(\"x\", \"yyyyy\") -> \"xy\" fails");
     }
 
     @Test
@@ -174,6 +183,8 @@ public class StringExercisesTest {
         assertEquals("llo", tweakFront("Hello"), "tweakFront(\"Hello\") -> \"llo\" fails");
         assertEquals("aay", tweakFront("away"), "tweakFront(\"away\") -> \"aay\" fails");
         assertEquals("abed", tweakFront("abed"), "tweakFront(\"abed\") -> \"abed\" fails");
+        assertEquals("boe", tweakFront("oboe"), "tweakFront(\"oboe\") -> \"boe\" fails");
+        assertEquals("", tweakFront(""), "tweakFront(\"\") -> \"\" fails");
     }
 
     @Test
@@ -181,6 +192,8 @@ public class StringExercisesTest {
         assertEquals("Hi", stripX("xHix"), "stripX(\"xHix\") -> \"Hi\" fails");
         assertEquals("Hi", stripX("xHi"), "stripX(\"xHi\") -> \"Hi\" fails");
         assertEquals("Hxi", stripX("Hxix"), "stripX(\"Hxix\") -> \"Hxi\" fails");
+        assertEquals("", stripX("x"), "stripX(\"x\") -> \"\" fails");
+        assertEquals("", stripX(""), "stripX(\"\") -> \"\" fails");
     }
 
 }

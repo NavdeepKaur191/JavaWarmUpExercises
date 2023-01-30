@@ -8,6 +8,7 @@ public class StringExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 1.Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
      *
      * Example Results:
@@ -24,6 +25,7 @@ public class StringExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 2. Given two strings, a and b, return the result of putting them together in the order abba,
      * e.g. "Hi" and "Bye" returns "HiByeByeHi".
      *
@@ -82,6 +84,7 @@ public class StringExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 5. Given a string, return a new string made of 3 copies of the last 2 chars of the original string.
      * The string length will be at least 2.
      *
@@ -99,6 +102,7 @@ public class StringExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 6. Given a string of even length, return the first half. So the string "WooHoo" yields "Woo".
      *
      * Example Results:
@@ -115,6 +119,7 @@ public class StringExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 7. Given a string, return a version without the first and last char, so "Hello" yields "ell".
      * The string length will be at least 2.
      *
@@ -171,6 +176,7 @@ public class StringExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 10. Given a string, return a "rotated right 2" version where the last 2 chars are moved to the start.
      * The string length will be at least 2.
      *
@@ -188,6 +194,7 @@ public class StringExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 11. Given a string, return a string length 1 from its front, unless front is false,
      * in which case return a string length 1 from its back. The string will be non-empty.
      *
@@ -241,6 +248,7 @@ public class StringExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 14. Given a string and an int n, return a string made of the first and last n chars from the string.
      * The string length will be at least n.
      *
@@ -286,8 +294,10 @@ public class StringExercises {
      * Example Results:
      * hasBad("badxx") -> true
      * hasBad("xbadxx") -> true
-     * hasBad("xxbadxx") -> false
-     *
+     * hasBad("xxbadxx") -> false    
+     * hasBad("") -> false
+     * hasBad("cantaloupe") -> false
+     * 
      * @param str
      * @return
      */
@@ -305,7 +315,8 @@ public class StringExercises {
      * atFirst("hello") -> "he"
      * atFirst("hi") -> "hi"
      * atFirst("h") -> "h@"
-     *
+     * atFirst("") -> "@@"
+     * 
      * @param str
      * @return
      */
@@ -345,8 +356,11 @@ public class StringExercises {
      * Example Results:
      * conCat("abc", "cat") -> "abcat"
      * conCat("dog", "cat") -> "dogcat"
-     * conCat("abc", "") -> "abc"
-     *
+     * conCat("abc", "") -> "abc"   
+     * conCat("", "abc") -> "abc"
+     * conCat("b", "boat") -> "boat"
+     * conCat("boat", "t") -> "boat"
+     * 
      * @param a
      * @param b
      * @return
@@ -365,6 +379,7 @@ public class StringExercises {
      * swapLast("coding") -> "codign"
      * swapLast("cat") -> "cta"
      * swapLast("ab") -> "ba"
+     * swapLast("a") -> "a"
      *
      * @param str
      * @return
@@ -401,8 +416,10 @@ public class StringExercises {
      * Example Results:
      * minCat("Hello", "Hi") -> "loHi"
      * minCat("Hello", "java") -> "ellojava"
-     * minCat("java", "Hello") -> "javaello"
-     *
+     * minCat("java", "Hello") -> "javaello"    
+     * minCat("", "beep") -> ""
+     * minCat("x", "yyyyy") -> "xy"
+     * 
      * @param a
      * @param b
      * @return
@@ -420,8 +437,10 @@ public class StringExercises {
      * Example Results:
      * tweakFront("Hello") -> "llo"
      * tweakFront("away") -> "aay"
-     * tweakFront("abed") -> "abed"
-     *
+     * tweakFront("abed") -> "abed"  
+     * tweakFront("oboe") -> "boe"
+     * tweakFront("") -> ""
+     * 
      * @param str
      * @return
      */
@@ -438,8 +457,10 @@ public class StringExercises {
      * Example Results:
      * stripX("xHix") -> "Hi"
      * stripX("xHi") -> "Hi"
-     * stripX("Hxix") -> "Hxi"
-     *
+     * stripX("Hxix") -> "Hxi"     * 
+     * stripX("x") -> ""
+     * stripX("") -> ""
+     * 
      * @param str
      * @return
      */

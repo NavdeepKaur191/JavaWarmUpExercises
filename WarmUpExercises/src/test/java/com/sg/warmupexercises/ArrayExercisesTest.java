@@ -85,7 +85,7 @@ public class ArrayExercisesTest {
 
     @Test
     public void testKeepLast() {
-        assertEquals(new int[]{0, 0, 0, 0, 0, 6}, keepLast(new int[]{4, 5, 6}), "keepLast({4, 5, 6}) -> {0, 0, 0, 0, 0, 6}fails");
+        assertEquals(new int[]{0, 0, 0, 0, 0, 6}, keepLast(new int[]{4, 5, 6}), "keepLast({4, 5, 6}) -> {0, 0, 0, 0, 0, 6} fails");
         assertEquals(new int[]{0, 0, 0, 2}, keepLast(new int[]{1, 2}), "keepLast({1, 2}) -> {0, 0, 0, 2} fails");
         assertEquals(new int[]{0, 3}, keepLast(new int[]{3}), "keepLast({3}) -> {0, 3} fails");
     }

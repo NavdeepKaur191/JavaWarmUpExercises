@@ -16,6 +16,7 @@ public class ConditionalExercises {
      * areWeInTrouble(true, true) -> true
      * areWeInTrouble(false, false) -> true
      * areWeInTrouble(true, false) -> false
+     * areWeInTrouble(false,true) -> false
      *
      * @param aSmile
      * @param bSmile
@@ -47,6 +48,7 @@ public class ConditionalExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 3.Given two int values, return their sum. However, if the two values are the same,
      * then return double their sum.
      *
@@ -279,7 +281,10 @@ public class ConditionalExercises {
      * Example Results:
      * startHi("hi there") -> true
      * startHi("hi") -> true
-     * startHi("high up") -> false
+     * startHi("high up") -> false 
+     * startHi("g") -> false
+     * startHi("hip") -> false
+     * startHi("hi, how are you?") -> true
      *
      * @param str
      * @return
@@ -309,6 +314,7 @@ public class ConditionalExercises {
     /**
      *
      * Please replace the code in following method according to following details.
+     * 
      * 17.Given 2 int values, return true if either of them is in the range 10..20 inclusive.
      *
      * Example Results:
@@ -324,9 +330,9 @@ public class ConditionalExercises {
         throw new UnsupportedOperationException("Code not yet written...!");
     }
 
-    /**
-     *
+    /**     *
      * Please replace the code in following method according to following details.
+     * 
      * 18.We'll say that a number is "teen" if it is in the range 13..19 inclusive.
      * Given 3 int values, return true if 1 or more of them are teen.
      *
@@ -347,6 +353,7 @@ public class ConditionalExercises {
     /**
      *
      * Please replace the code in following method according to following details.
+     * 
      * 19.We'll say that a number is "teen" if it is in the range 13..19 inclusive.
      * Given 2 int values, return true if one or the other is teen, but not both.
      *
@@ -354,6 +361,7 @@ public class ConditionalExercises {
      * soAlone(13, 99) -> true
      * soAlone(21, 19) -> true
      * soAlone(13, 13) -> false
+     * soAlone(44, 5) -> false
      *
      * @param a
      * @param b
@@ -384,6 +392,7 @@ public class ConditionalExercises {
     /**
      *
      * Please replace the code in following method according to following details.
+     * 
      * 21.Return true if the given string begins with "*ix", the '*' can be anything, so "pix", "9ix" .. all count.
      *
      * Example Results:
@@ -400,6 +409,7 @@ public class ConditionalExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 22.Given a string, return a string made of the first 2 chars (if present),
      * however include first char only if it is 'o' and include the second only if it is 'z', so "ozymandias" yields "oz".
      *
@@ -407,6 +417,7 @@ public class ConditionalExercises {
      * startOz("ozymandias") -> "oz"
      * startOz("bzoo") -> "z"
      * startOz("oxx") -> "o"
+     * startOz("w") -> ""    
      *
      * @param str
      * @return
@@ -462,6 +473,7 @@ public class ConditionalExercises {
      * gotE("Hello") -> true
      * gotE("Heelle") -> true
      * gotE("Heelele") -> false
+     * gotE("344") -> false    
      *
      * @param str
      * @return
@@ -490,6 +502,7 @@ public class ConditionalExercises {
 
     /**
      * Please replace the code in following method according to following details.
+     * 
      * 27.Given a non-empty string and an int N, return the string made starting with char 0,
      * and then every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on. N is 1 or more.
      *

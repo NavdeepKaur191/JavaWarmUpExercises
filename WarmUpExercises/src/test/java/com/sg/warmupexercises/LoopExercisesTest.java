@@ -16,8 +16,8 @@ public class LoopExercisesTest {
     @Test
     public void testStringTimes() {
         assertEquals("HiHi", stringTimes("Hi", 2), "stringTimes(\"Hi\", 2) -> \"HiHi\" fails");
-        assertEquals("HiHiHi", stringTimes("Hi", 3), "stringTimes(\"Hi\", 2) -> \"HiHi\" fails");
-        assertEquals("Hi", stringTimes("Hi", 1), "stringTimes(\"Hi\", 2) -> \"HiHi\" fails");
+        assertEquals("HiHiHi", stringTimes("Hi", 3), "stringTimes(\"Hi\", 3) -> \"HiHiHi\" fails");
+        assertEquals("Hi", stringTimes("Hi", 1), "stringTimes(\"Hi\", 1) -> \"Hi\" fails");
     }
 
     @Test
@@ -39,6 +39,9 @@ public class LoopExercisesTest {
         assertEquals(true, doubleX("axxbb"), "doubleX(\"axxbb\") -> true fails");
         assertEquals(false, doubleX("axaxxax"), "doubleX(\"axaxxax\") -> false fails");
         assertEquals(true, doubleX("xxxxx"), "doubleX(\"xxxxx\") -> true fails");
+        assertEquals(false, doubleX("dffa"), "doubleX(\"dffa\") -> false fails");
+        assertEquals(false, doubleX("tx"), "doubleX(\"tx\") -> false fails");
+        assertEquals(true, doubleX("txx"), "doubleX(\"txx\") -> true fails");
     }
 
     @Test
@@ -81,6 +84,9 @@ public class LoopExercisesTest {
         assertEquals(true, array123(new int[]{1, 1, 2, 3, 1}), "array123({1, 1, 2, 3, 1}) -> true fails");
         assertEquals(false, array123(new int[]{1, 1, 2, 4, 1}), "array123({1, 1, 2, 4, 1}) -> false fails");
         assertEquals(true, array123(new int[]{1, 1, 2, 1, 2, 3}), "array123({1, 1, 2, 1, 2, 3}) -> true fails");
+        assertEquals(true, array123(new int[]{1, 2, 3}), "array123({1, 2, 3}) -> true fails");
+        assertEquals(false, array123(new int[]{3}), "array123({3}) -> false fails");
+        assertEquals(false, array123(new int[]{3, 2}), "array123({3, 2}) -> false fails");
     }
 
     @Test
@@ -116,6 +122,8 @@ public class LoopExercisesTest {
         assertEquals(1, array667(new int[]{6, 6, 2}), "array667({6, 6, 2}) -> 1 fails");
         assertEquals(1, array667(new int[]{6, 6, 2, 6}), "array667({6, 6, 2, 6}) -> 1 fails");
         assertEquals(1, array667(new int[]{6, 7, 2, 6}), "array667({6, 7, 2, 6}) ->1  fails");
+        assertEquals(2, array667(new int[]{6, 7, 6, 6}), "array667({6, 7, 6, 6}) ->2  fails");
+        assertEquals(0, array667(new int[]{1, 2, 6}), "array667({1, 2, 6}) ->0  fails");
     }
 
     @Test
@@ -123,6 +131,8 @@ public class LoopExercisesTest {
         assertEquals(true, noTriples(new int[]{1, 1, 2, 2, 1}), "noTriples({1, 1, 2, 2, 1}) -> true fails");
         assertEquals(false, noTriples(new int[]{1, 1, 2, 2, 2, 1}), "noTriples({1, 1, 2, 2, 2, 1}) -> false fails");
         assertEquals(false, noTriples(new int[]{1, 1, 1, 2, 2, 2, 1}), "noTriples({1, 1, 1, 2, 2, 2, 1}) -> false  fails");
+        assertEquals(true, noTriples(new int[]{3, 1, 1}), "noTriples({ 3, 1, 1 }) -> true  fails");
+        assertEquals(true, noTriples(new int[]{2, 1}), "noTriples({2, 1}) -> true  fails");
     }
 
     @Test
@@ -130,6 +140,8 @@ public class LoopExercisesTest {
         assertEquals(true, pattern51(new int[]{1, 2, 7, 1}), "pattern51({1, 2, 7, 1}) -> true fails");
         assertEquals(false, pattern51(new int[]{1, 2, 8, 1}), "pattern51({1, 2, 8, 1}) -> false fails");
         assertEquals(true, pattern51(new int[]{2, 7, 1}), "pattern51({2, 7, 1}) -> true  fails");
+        assertEquals(true, pattern51(new int[]{6, 4, 9, 3, 2}), "pattern51({6, 4, 9, 3, 2}) -> true fails");
+        assertEquals(false, pattern51(new int[]{2, 7}), "pattern51({2, 7}) -> false fails");
     }
 
 }
